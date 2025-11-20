@@ -23,7 +23,7 @@ if index is None:
 
 # Your get_embedding function
 def get_embedding(text, model="embeddinggemma"):
-    url = 'http://localhost:11434/api/embeddings'
+    url = 'https://ollama-ekinrota.onrender.com/api/embeddings'
     payload = {
         "model": model,
         "prompt": text
@@ -52,7 +52,7 @@ def retrieve_chunks(query, index, chunks_list, doc_names, doc_filter=None, k=3):
 
 # Your generate_response function
 def generate_response(query, context, model="gpt-oss:120b"):  # Your 120b model
-    url = 'http://localhost:11434/api/chat'
+    url = 'https://ollama-ekinrota.onrender.com/api/chat'
     prompt = f"""You are a financial analyst. Answer ONLY from the context. Be precise with numbers.
 
 CRITICAL: Parse tables/JSON explicitly:
